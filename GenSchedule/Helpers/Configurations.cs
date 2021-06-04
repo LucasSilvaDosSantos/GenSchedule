@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenSchedule.Helpers
 {
-    class Configurations
+    public class Configurations
     {
         public int LessonPerDay { get; private set; }
         private Configurations() { }
@@ -18,7 +18,7 @@ namespace GenSchedule.Helpers
             if (_instance == null)
             {
                 _instance = new Configurations();
-                _instance.LessonPerDay = lessonPerDay;
+                _instance.LessonPerDay = lessonPerDay != 0 ? lessonPerDay : 4;
             }
             return _instance;
         }

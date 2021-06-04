@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GenSchedule.Helpers;
+using System;
+using System.Linq;
 
 namespace GenSchedule
 {
@@ -6,8 +8,10 @@ namespace GenSchedule
     {
         static void Main(string[] args)
         {
+            int.TryParse(GetArg("--lesson-per-day"), out var lessonPerDay);
 
-            Console.WriteLine("Hello World!");
+            string GetArg(string argName)
+                => args?.Where(_ => _.Contains(argName)).FirstOrDefault()?.Split('=').Last();
         }
     }
 }
