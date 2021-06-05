@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace GenSchedule.Entities
 {
-    class Professor
+    public class Professor
     {
         public string Id { get; set; }
         public string Nome { get; set; }
+
+        public Professor(string id, string name)
+        {
+            Id = id;
+            Nome = name;
+        }
     }
 }
