@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace GenSchedule.Services
 {
-    class RandomService : IRandomHelper
+    class RandomService : IRandomService
     {
         public IEnumerable<T> RandomList<T>(List<T> list)
         {
